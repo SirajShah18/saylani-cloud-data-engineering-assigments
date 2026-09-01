@@ -143,12 +143,12 @@ order by s.store_name;
 
 -- Write your query below:
 select
-CONCAT(s.first_name, ' ', s.last_name) as staff_name,
+CONCAT(st.first_name, ' ', st.last_name) as staff_name,
 CONCAT(m.first_name, ' ', m.last_name) as manager_name
-from sales.staffs as s
-LEFT JOIN sales.staffs as m
-on s.manager_id = m.staff_id
-where s.manager_id IS NOT NULL;
+from sales.staffs as st
+inner JOIN sales.staffs as m
+on st.manager_id = m.staff_id
+select * from sales.staffs ;
 
 
 
